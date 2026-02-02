@@ -1,0 +1,269 @@
+/* ----------------------------
+   DASHBOARD BASE - TWO COLUMN
+---------------------------- */
+
+/* Main container */
+.vc-dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+}
+
+/* -----------------------
+   LEFT SIDEBAR
+----------------------- */
+.vc-dashboard-sidebar {
+    flex: 0 1 28%; /* 25-30% width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Profile Section */
+.vc-profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.vc-profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+
+.vc-profile-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.vc-profile-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.vc-button-edit {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Expandable Sidebar Sections */
+.vc-sidebar-section {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* Added for better alignment */
+    width: 100%;
+    padding: 8px; /* Added for spacing */
+}
+
+.vc-expand-btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.vc-expand-content {
+    display: none;
+    margin-top: 15px;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+    padding: 10px;
+    background-color: #fff; /* White background for content */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Light shadow */
+}
+
+
+/* -----------------------
+   MAIN CONTENT
+----------------------- */
+.vc-dashboard-main {
+    flex: 0 0 70%; /* 70-75% width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Wrapper + Title */
+.vc-filter-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.vc-filter-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.vc-filter-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Filter form */
+.vc-filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Label + input grouping */
+.vc-filter-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.vc-filter-group input {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid #cfd8e3;
+    background: #f9fbfd;
+    transition: 0.25s;
+}
+
+.vc-filter-group input:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 0 3px rgba(10,102,194,0.15);
+    background: #ffffff;
+}
+
+.vc-filter-group input::placeholder {
+    font-style: italic;
+}
+
+/* Buttons */
+.vc-filter-buttons {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.vc-button-filter, .vc-button-reset {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Primary */
+.vc-button-filter {
+    background: #0a66c2;
+    color: #fff;
+    border: none;
+}
+.vc-button-filter:hover {
+    background: #004182;
+}
+
+/* Reset */
+.vc-button-reset {
+    background: #f1f3f5;
+    color: #333;
+}
+.vc-button-reset:hover {
+    background: #e4e6e8;
+}
+
+
+/* Opportunities Feed */
+.vc-opportunities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vc-opportunity-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.vc-opportunity-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.vc-opportunity-org a {
+    text-decoration: none;
+    color: #0073b1;
+}
+
+.vc-opportunity-desc {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Apply Button */
+.vc-button-apply {
+    background-color: #406bd6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Alerts */
+.vc-alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vc-dashboard {
+        flex-direction: column;
+    }
+
+    .vc-dashboard-sidebar, .vc-dashboard-main {
+        flex: 1 1 100%;
+    }
+
+    .vc-filter-form {
+        flex-direction: column;
+    }
+
+    .vc-filter-form input[type="text"], 
+    .vc-button-filter, .vc-button-reset {
+        flex: 1 1 100%;
+    }
+}

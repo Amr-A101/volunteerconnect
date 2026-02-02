@@ -1,0 +1,14 @@
+@import url('footer_base.css');
+
+:root {
+    --accent-color: #6f42c1;
+}
+
+/* Applying the Organization accent color */
+.vc-footer-heading {
+    color: var(--accent-color);
+}
+
+.vc-footer-nav a:hover {
+    color: var(--accent-color);
+}

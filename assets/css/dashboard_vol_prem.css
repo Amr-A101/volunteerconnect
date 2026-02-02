@@ -1,0 +1,1052 @@
+/* =========================================================
+   Volunteer Connect – Volunteer Dashboard (Improved)
+   File: dashboard_vol_improved.css
+========================================================= */
+
+/* -------------------------
+   ROOT VARIABLES (Light Theme)
+------------------------- */
+:root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-soft: #f1f5f9;
+    --border: #e2e8f0;
+    
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    
+    --primary: #3b82f6;
+    --primary-light: #dbeafe;
+    --primary-dark: #1d4ed8;
+    
+    --success: #10b981;
+    --success-light: #d1fae5;
+    
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+    
+    --danger: #ef4444;
+    --danger-light: #fee2e2;
+    
+    --info: #0ea5e9;
+    --info-light: #e0f2fe;
+    
+    --purple: #8b5cf6;
+    --purple-light: #ede9fe;
+    
+    --orange: #f97316;
+    --orange-light: #ffedd5;
+    
+    --radius: 16px;
+    --radius-sm: 8px;
+    --radius-lg: 20px;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    --transition: all 0.2s ease;
+}
+
+/* -------------------------
+   BASE RESET
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* -------------------------
+   DASHBOARD LAYOUT
+------------------------- */
+.vc-dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .vc-dashboard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 16px;
+    }
+}
+
+/* -------------------------
+   SIDEBAR IMPROVEMENTS
+------------------------- */
+.vc-dashboard-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 24px;
+}
+
+/* Profile Card - Enhanced */
+.vc-profile-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.vc-profile-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.vc-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.vc-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+}
+
+.vc-profile-name {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.vc-rating-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.vc-rating-display i {
+    color: #fbbf24;
+    font-size: 14px;
+}
+
+.vc-rating-display i.filled {
+    color: #f59e0b;
+}
+
+.vc-rating-value {
+    margin-left: 6px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.vc-profile-details {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+.vc-detail-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--text-muted);
+    padding: 8px 0;
+}
+
+.vc-detail-item i {
+    width: 20px;
+    color: var(--primary);
+}
+
+.vc-btn-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.vc-btn-profile:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Skills & Interests - Redesigned */
+.vc-sidebar-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.vc-sidebar-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.vc-tag {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.vc-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Improved tag styles with icons */
+.vc-tag-skill {
+    background: linear-gradient(135deg, #dbeafe, #93c5fd);
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.vc-tag-skill::before {
+    content: "✓";
+    font-weight: bold;
+}
+
+.vc-tag-interest {
+    background: linear-gradient(135deg, #f3e8ff, #d8b4fe);
+    color: #6d28d9;
+    border: 1px solid #e9d5ff;
+}
+
+.vc-tag-interest::before {
+    content: "♥";
+    font-size: 0.875em;
+}
+
+/* -------------------------
+   MAIN CONTENT AREA
+------------------------- */
+.vc-dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* -------------------------
+   IMPROVED TABS
+------------------------- */
+.vc-tabs-container {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.vc-tabs {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: space-between;
+}
+
+.vc-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.vc-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    position: relative;
+    margin: 8px;
+}
+
+.vc-tab:hover {
+    background: var(--bg-soft);
+    color: var(--text-main);
+}
+
+.vc-tab.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.vc-tab-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--danger);
+    color: white;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 999px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* -------------------------
+   TAB PANELS WITH CARD LAYOUT
+------------------------- */
+.vc-tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.vc-tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------
+   STATS CARDS GRID
+------------------------- */
+.vc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.vc-stat-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.vc-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vc-stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.vc-stat-purple .vc-stat-icon {
+    background: var(--purple-light);
+    color: var(--purple);
+}
+
+.vc-stat-blue .vc-stat-icon {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.vc-stat-green .vc-stat-icon {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.vc-stat-orange .vc-stat-icon {
+    background: var(--orange-light);
+    color: var(--orange);
+}
+
+.vc-stat-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+
+.vc-stat-info p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* -------------------------
+   QUICK ACTIONS - CARD STYLE
+------------------------- */
+.vc-quick-actions h3 {
+    margin-bottom: 16px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.vc-action-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.vc-action-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.vc-action-card i {
+    font-size: 24px;
+    color: var(--primary);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-light);
+    border-radius: 12px;
+}
+
+.vc-action-card span {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* -------------------------
+   CONTENT CARDS (Pending, Upcoming, Completed)
+------------------------- */
+.vc-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.vc-items-list {
+    display: grid;
+    gap: 12px;
+}
+
+.vc-item-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.vc-item-card:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vc-item-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.vc-icon-warning {
+    background: var(--warning-light);
+    color: var(--warning);
+}
+
+.vc-icon-blue {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.vc-icon-green {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.vc-item-content {
+    flex: 1;
+}
+
+.vc-item-content h4 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.vc-item-content h4 a {
+    color: var(--text-main);
+}
+
+.vc-item-content h4 a:hover {
+    color: var(--primary);
+}
+
+.vc-item-meta {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-item-meta i {
+    width: 14px;
+}
+
+.vc-item-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.vc-badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.vc-btn-secondary {
+    padding: 8px 16px;
+    background: var(--bg-soft);
+    color: var(--text-main);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.vc-btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* -------------------------
+   FEEDBACK & RATINGS CARDS
+------------------------- */
+.vc-rating-summary-card {
+    background: linear-gradient(135deg, var(--primary-light), var(--purple-light));
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.vc-rating-big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-rating-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.vc-rating-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.vc-reviews-list {
+    display: grid;
+    gap: 16px;
+}
+
+.vc-review-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.vc-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.vc-review-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.vc-review-opp {
+    font-size: 0.875rem;
+    color: var(--primary);
+}
+
+.vc-review-text {
+    color: var(--text-main);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.vc-review-date {
+    font-size: 0.8125rem;
+    color: var(--text-light);
+}
+
+/* -------------------------
+   RECOMMENDED OPPORTUNITIES - ENHANCED
+------------------------- */
+.vc-section-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.vc-opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.vc-opp-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Key for sticky footer */
+    height: 100%; /* Ensure card takes full height */
+    min-height: 480px; /* Set minimum height for consistency */
+}
+
+.vc-opp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vc-opp-image {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.vc-opp-placeholder {
+    background: linear-gradient(135deg, var(--primary-light), var(--info-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--primary);
+}
+
+.vc-match-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--success), var(--primary));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+}
+
+.vc-opp-body {
+    padding: 20px;
+    position: relative;
+    flex-grow: 1; /* Makes this area expand to push footer down */
+    display: flex;
+    flex-direction: column;
+}
+
+.vc-opp-body h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-main);
+    padding-right: 80px; /* Space for match badge */
+    line-height: 1.3;
+}
+
+.vc-opp-org {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.vc-opp-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.5;
+    flex-grow: 1; /* Make description take available space */
+}
+
+/* MATCH BREAKDOWN - Positioned above footer */
+.vc-match-breakdown {
+    background: var(--bg-soft);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-top: auto; /* Pushes itself to bottom of .vc-opp-body */
+    margin-bottom: 16px;
+}
+
+.vc-match-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 0.8125rem;
+}
+
+.vc-match-row:last-child {
+    margin-bottom: 0;
+}
+
+.vc-match-row span:first-child {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Progress bars - Enhanced */
+.vc-match-row progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--border);
+}
+
+.vc-match-row progress::-webkit-progress-bar {
+    background-color: var(--border);
+    border-radius: 5px;
+}
+
+.vc-match-row progress::-webkit-progress-value {
+    background: linear-gradient(90deg, var(--success), var(--primary));
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+.vc-match-row progress::-moz-progress-bar {
+    background: linear-gradient(90deg, var(--success), var(--primary));
+    border-radius: 5px;
+}
+
+/* Progress bar colors for different categories */
+.vc-match-row:nth-child(1) progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #3b82f6, #22c55e); /* Interest */
+}
+
+.vc-match-row:nth-child(2) progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #22c55e, #16a34a); /* Skills */
+}
+
+.vc-match-row:nth-child(3) progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #f59e0b, #f97316); /* Location */
+}
+
+.vc-opp-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--bg-soft);
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* FOOTER - Always sticks to bottom */
+.vc-opp-footer {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    margin-top: auto; /* Key property - pushes footer to bottom */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.vc-opp-slots {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-btn-apply {
+    background: var(--primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.vc-btn-apply:hover {
+    background: var(--primary-dark);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* -------------------------
+   EMPTY STATES
+------------------------- */
+.vc-empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.vc-empty-state i {
+    font-size: 48px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.vc-empty-state p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.vc-btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* -------------------------
+   ALERT
+------------------------- */
+.vc-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--warning-light);
+    color: #92400e;
+    padding: 16px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--warning);
+    margin-bottom: 24px;
+}
+
+.vc-alert i {
+    color: var(--warning);
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+------------------------- */
+@media (max-width: 768px) {
+    .vc-dashboard {
+        padding: 12px;
+    }
+    
+    .vc-stats-grid,
+    .vc-actions-grid,
+    .vc-opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vc-opportunities-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .vc-tabs {
+        padding-bottom: 8px;
+    }
+    
+    .vc-tab {
+        padding: 10px 16px;
+        font-size: 0.875rem;
+    }
+    
+    .vc-match-row {
+        grid-template-columns: 70px 1fr 35px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-dashboard {
+        gap: 16px;
+    }
+    
+    .vc-profile-card,
+    .vc-sidebar-card,
+    .vc-tabs-container,
+    .vc-stat-card,
+    .vc-action-card,
+    .vc-item-card,
+    .vc-review-card,
+    .vc-opp-card {
+        border-radius: var(--radius-sm);
+    }
+    
+    .vc-stat-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .vc-stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+    
+    .vc-match-badge {
+        top: 12px;
+        right: 12px;
+        font-size: 0.6875rem;
+        padding: 4px 8px;
+    }
+}
+
+
+.vc-recommend-filters {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.vc-filter-btn {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #eee;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.vc-filter-btn.active {
+    background: #5b7cfa;
+    color: #fff;
+    font-weight: 600;
+}

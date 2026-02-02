@@ -1,0 +1,117 @@
+.vc-footer {
+
+    background-color: #f4f4f9; 
+    color: #333; 
+    padding-top: 40px;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vc-footer-container, 
+.vc-footer-bottom-container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vc-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.vc-footer-col {
+    /* Adjust width to accommodate 3 columns + margins */
+    width: 25%; 
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.vc-footer-heading {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #004d99;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Style for navigation links */
+.vc-footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.vc-footer-nav a {
+    color: #555;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s;
+    font-size: 0.95em;
+}
+
+.vc-footer-nav a:hover {
+    color: #007bff; /* Hover color */
+    text-decoration: underline;
+}
+
+/* Role-specific messages */
+.vc-footer-brand-tagline p,
+.vc-footer-brand-tagline a {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #666;
+}
+.vc-footer-brand-tagline a {
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Full-wide row for the copyright/bottom message */
+.vc-footer-bottom-row {
+    width: 100%;
+    background: linear-gradient(to right, #004d99, #007bff); 
+    /* background: linear-gradient(to right, #1a237e, #3949ab); */
+    padding: 15px 0;
+}
+
+/* Container within the row to center the text */
+.vc-footer-bottom-container {
+    text-align: center;
+}
+
+.vc-footer-bottom-container p {
+    color: #ffffff; /* White text for high contrast on the dark background */
+    margin: 0;
+    font-size: 0.85em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+
+/* ============================================
+   Scroll to Top Button (optional)
+   ============================================ */
+.vc-scroll-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #667eea;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.vc-scroll-to-top:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}

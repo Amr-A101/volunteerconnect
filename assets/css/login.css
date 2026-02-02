@@ -1,0 +1,174 @@
+/* ==============================
+   GLOBAL FIX (CRITICAL)
+============================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ==============================
+   AUTH PAGE LAYOUT
+============================== */
+.vc-auth-page {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+/* ==============================
+   LEFT VISUAL PANEL
+============================== */
+
+.vc-auth-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TWO stacked backgrounds for seamless loop */
+.vc-auth-scroll-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("/volcon/assets/res/volcon-collage.jpg"),
+        url("/volcon/assets/res/volcon-collage.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    /* filter: blur(5px); */
+    animation: vcScrollBg 60s linear infinite;
+}
+
+/* Infinite vertical scroll */
+@keyframes vcScrollBg {
+    from {
+        background-position:
+            center top,
+            center 1920px;
+    }
+    to {
+        background-position:
+            center -1920px,
+            center 0;
+    }
+}
+
+/* ==============================
+   RIGHT LOGIN PANEL
+============================== */
+.vc-auth-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.vc-auth-form {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Logo */
+.vc-auth-logo {
+    width: 176px;
+}
+
+/* Titles */
+.vc-auth-form h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0;
+}
+
+.vc-auth-form h2 {
+    margin: 10px 0 24px;
+    font-size: 18px;
+    color: #64748b;
+}
+
+/* Error */
+.vc-auth-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* ==============================
+   FORM ELEMENTS
+============================== */
+.vc-auth-form input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f9fbfd;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.vc-auth-form input:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+    outline: none;
+}
+
+.vc-auth-form button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.vc-auth-form button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Links */
+.vc-auth-small {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.vc-auth-small a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.vc-auth-small a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE BEHAVIOR
+============================== */
+@media (max-width: 1024px) {
+    .vc-auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-auth-visual {
+        display: none;
+    }
+}

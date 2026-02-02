@@ -1,0 +1,21 @@
+@import url('header_base.css');
+
+/* Guest Theme - soft blue */
+:root {
+    --header-bg: #f9fbff;
+    --header-text: #2a4a9c;
+    --header-accent: #406bd6;
+}
+
+.vc-nav a {
+    color: var(--header-text);
+}
+
+.vc-nav a:hover {
+    background: rgba(64, 107, 214, 0.1);
+}
+
+.vc-nav a:last-child {
+    background: var(--header-accent);
+    color: white;
+}

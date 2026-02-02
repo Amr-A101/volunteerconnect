@@ -1,0 +1,14 @@
+@import url('footer_base.css');
+
+:root {
+    --accent-color: #2a4a9c;
+}
+
+/* Applying the Volunteer accent color */
+.vc-footer-heading {
+    color: var(--accent-color);
+}
+
+.vc-footer-nav a:hover {
+    color: var(--accent-color);
+}

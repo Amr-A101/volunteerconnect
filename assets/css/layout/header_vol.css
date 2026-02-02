@@ -1,0 +1,25 @@
+@import url('header_base.css');
+
+/* Volunteer Theme - blue/green */
+:root {
+    --header-bg: #ffffff;
+    --header-text: #2c3e50;
+    --header-accent: #3498db;
+    --header-accent-dark: #2980b9;
+    --nav-hover-bg: rgba(52, 152, 219, 0.1);
+}
+
+.vc-logo-text {
+    background: linear-gradient(135deg, #3498db, #1f5fa8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vc-user-btn, .vc-search-btn, .vc-nav-cta {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.vc-user-btn:hover, .vc-search-btn:hover, .vc-nav-cta:hover  {
+    background: linear-gradient(135deg, #2980b9, #174a85);
+}

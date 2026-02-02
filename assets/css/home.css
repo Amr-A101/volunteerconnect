@@ -1,0 +1,638 @@
+/* =========================
+   HERO SLIDESHOW
+========================= */
+.vc-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-hero-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vc-hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 8s ease-out;
+    transform: scale(1);
+}
+
+.vc-hero-slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.vc-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(147, 51, 234, 0.75) 100%);
+    z-index: 1;
+}
+
+.vc-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.vc-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vc-hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.vc-hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vc-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.vc-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.vc-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.vc-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.vc-btn-primary {
+    background: white;
+    color: #2563eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.vc-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.vc-btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.vc-btn-outline:hover {
+    background: white;
+    color: #2563eb;
+    transform: translateY(-3px);
+}
+
+.vc-btn-lg {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.vc-section {
+    padding: 5rem 0;
+}
+
+.vc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vc-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.vc-section-desc {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+.vc-intro {
+    background: linear-gradient(to bottom, #f8fafc, white);
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.vc-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+.vc-features {
+    background: white;
+}
+
+.vc-feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.vc-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.vc-feature-card:hover::before {
+    opacity: 0.05;
+}
+
+.vc-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+    border-color: #2563eb;
+}
+
+.vc-feature-card i {
+    font-size: 3.5rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.vc-feature-card:hover i {
+    transform: scale(1.15) rotateY(360deg);
+}
+
+.vc-feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    position: relative;
+    z-index: 1;
+}
+
+.vc-feature-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   PARALLAX SECTION
+========================= */
+.vc-parallax {
+    position: relative;
+    height: 400px;
+    background-image: url('/volcon/assets/res/hero-volunteer.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.vc-parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 99, 235, 0.8);
+}
+
+.vc-parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.vc-parallax-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.vc-parallax-content p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.vc-timeline {
+    background: #f8fafc;
+}
+
+.vc-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.6s ease forwards;
+    position: relative;
+}
+
+.vc-timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.vc-timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.vc-timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.vc-timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+.vc-timeline-item span {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.vc-timeline-item:hover span {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.vc-timeline-item span::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, #2563eb, transparent);
+}
+
+.vc-timeline-item:last-child span::after {
+    display: none;
+}
+
+.vc-timeline-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.vc-timeline-item p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.vc-timeline-image {
+    flex: 0 0 45%;
+    max-width: 540px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.vc-timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+
+/* =========================
+   ROLE CARDS
+========================= */
+.vc-roles {
+    background: white;
+}
+
+.vc-role-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 2px solid #e2e8f0;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vc-role-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.vc-role-card:hover::before {
+    opacity: 1;
+}
+
+.vc-role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+    border-color: #2563eb;
+}
+
+.vc-role-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.vc-role-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    border-radius: 2px;
+}
+
+.vc-role-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vc-role-card li {
+    padding: 0.75rem 0;
+    color: #475569;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.vc-role-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.vc-role-card:hover li {
+    padding-left: 2.5rem;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.vc-cta {
+    background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vc-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.vc-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vc-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.vc-cta p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .vc-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .vc-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .vc-section h2 {
+        font-size: 2rem;
+    }
+
+    .vc-section-desc {
+        font-size: 1rem;
+    }
+
+    .vc-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vc-timeline-item span::after {
+        display: none;
+    }
+
+    .vc-hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .vc-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .vc-parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .vc-hero {
+        min-height: 500px;
+    }
+
+    .vc-section {
+        padding: 3rem 0;
+    }
+
+    .vc-feature-card,
+    .vc-role-card {
+        padding: 1.5rem;
+    }
+}

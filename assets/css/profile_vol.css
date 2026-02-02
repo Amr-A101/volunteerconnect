@@ -1,0 +1,784 @@
+/* VOLUNTEER THEME TWEAKS */
+
+.vc-pro-avatar {
+    border-color: #fff;
+}
+
+.vc-pro-pill {
+    background: #e8efff;
+    border-color: #bcd2ff;
+}
+
+.vc-pro-card h3 {
+    color: #0a66c2;
+}
+
+/* Volunteer-specific hero colors */
+.vc-pro-hero {
+    background: linear-gradient(135deg, #0a66c2, #5fa8ff);
+}
+
+/* Rating in Header */
+.vc-vol-rating {
+    text-align: right;
+}
+
+.vc-rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.vc-star-filled {
+    color: #ffc107;
+}
+
+.vc-star-empty {
+    color: #e4e5e9;
+}
+
+.vc-rating-score {
+    margin-left: 8px;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+}
+
+.vc-rating-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tabs */
+.vc-vol-tabs {
+    display: flex;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    border-bottom: 2px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.vc-vol-tab {
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    position: relative;
+    text-decoration: none;
+}
+
+.vc-vol-tab:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.vc-vol-tab.active {
+    color: #0a66c2;
+    border-bottom: 3px solid #0a66c2;
+    background: #f0f7ff;
+}
+
+.vc-tab-badge {
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+/* Tab Content */
+.vc-vol-tab-content {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    min-height: 300px;
+}
+
+/* Participation Tab */
+.vc-part-section {
+    margin-bottom: 32px;
+}
+
+.vc-section-title {
+    font-size: 20px;
+    color: #1f2937;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.vc-section-count {
+    background: #e5e7eb;
+    color: #374151;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+}
+
+.vc-part-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.vc-part-stat {
+    background: #f0f7ff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #c8ddff;
+}
+
+.vc-part-stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0a66c2;
+    margin-bottom: 4px;
+}
+
+.vc-part-stat-label {
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vc-part-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.vc-part-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-part-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.vc-part-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.vc-part-title {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.vc-part-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.vc-part-title a:hover {
+    color: #0a66c2;
+    text-decoration: underline;
+}
+
+.vc-part-org {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-part-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.vc-part-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-part-hours {
+    margin-bottom: 12px;
+}
+
+.vc-hours-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #d1fae5;
+    color: #065f46;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #34d399;
+}
+
+.vc-part-rating {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.vc-rating-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.vc-rating-small .vc-rating-stars {
+    margin-bottom: 0;
+}
+
+.vc-rating-small .vc-star-filled,
+.vc-rating-small .vc-star-empty {
+    font-size: 14px;
+}
+
+.vc-rating-small .vc-rating-score {
+    font-size: 14px;
+    color: #374151;
+}
+
+.vc-part-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.vc-part-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Buttons */
+.vc-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.vc-btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.vc-btn-primary {
+    background: #0a66c2;
+    color: white;
+    border: 2px solid #0a66c2;
+}
+
+.vc-btn-primary:hover {
+    background: #004182;
+    border-color: #004182;
+}
+
+.vc-btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+}
+
+.vc-btn-secondary:hover {
+    background: #d1d5db;
+    border-color: #d1d5db;
+}
+
+/* Status Badges */
+.vc-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.vc-status-attended {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.vc-status-completed {
+    background: #e5e7eb;
+    color: #374151;
+    border: 1px solid #9ca3af;
+}
+
+/* Empty State */
+.vc-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    margin-top: 20px;
+}
+
+.vc-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #9ca3af;
+}
+
+.vc-empty-state h3 {
+    margin: 0 0 8px 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.vc-empty-state p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+.vc-empty-state .vc-btn {
+    margin-top: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vc-pro-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .vc-pro-subcontent {
+        text-align: left;
+    }
+    
+    .vc-vol-rating {
+        text-align: left;
+    }
+    
+    .vc-vol-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .vc-vol-tab {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+    
+    .vc-part-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .vc-part-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-part-card {
+        padding: 16px;
+    }
+    
+    .vc-part-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .vc-part-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .vc-part-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .vc-part-actions .vc-btn {
+        width: 100%;
+    }
+}
+
+/* Ensure proper alignment for rating in hero */
+.vc-pro-subcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .vc-pro-subcontent {
+        align-items: flex-start;
+    }
+}
+
+/* Accordion styles */
+.vc-pro-accordion .vc-pro-acc-btn.active + .vc-pro-acc-content {
+    display: block;
+}
+
+/* Modal Styles */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Make sure modal overlay covers everything properly */
+.vc-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-modal.active {
+    display: flex;
+}
+
+.vc-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.vc-modal-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.vc-modal-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.vc-modal-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vc-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.vc-modal-close:hover {
+    color: #333;
+}
+
+.vc-modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    background: #f8f9fa;
+}
+
+/* Style for the reset filter button */
+.vc-filter-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+    border: 2px dashed #eee;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.vc-filter-empty-state .vc-btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+/* Reviews Stats */
+.vc-reviews-stats {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.vc-rating-distribution {
+    flex: 1;
+}
+
+.vc-rating-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.vc-rating-label {
+    width: 50px;
+    font-size: 14px;
+    color: #666;
+}
+
+.vc-rating-bar-bg {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.vc-rating-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    transition: width 0.5s ease;
+}
+
+.vc-reviews-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 120px;
+}
+
+.vc-total-reviews, .vc-avg-rating {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.vc-total-number, .vc-avg-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.vc-total-label, .vc-avg-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Reviews Filters */
+.vc-reviews-filters {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    background: white;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.vc-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vc-filter-group label {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vc-filter-group select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.vc-filter-group input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Reviews List */
+.vc-reviews-list {
+    padding: 20px 30px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: 50vh;
+}
+
+.vc-review-card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vc-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.vc-reviewer-info {
+    flex: 1;
+}
+
+.vc-reviewer-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.vc-reviewer-type {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.vc-review-opportunity {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vc-review-meta {
+    text-align: right;
+    min-width: 150px;
+}
+
+.vc-review-rating {
+    margin-bottom: 5px;
+}
+
+.vc-rating-value {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 8px;
+}
+
+.vc-review-date {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.vc-review-body {
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.vc-review-body p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.vc-empty-reviews {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+}
+
+.vc-empty-reviews i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.vc-empty-reviews p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Make rating clickable */
+.vc-rating-link {
+    font-size: 14px;
+    margin-left: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.vc-vol-rating:hover .vc-rating-link {
+    opacity: 1;
+}

@@ -1,0 +1,147 @@
+
+/* -------------------------------------
+   LAYOUT: 2/3 FORM + 1/3 MEDIA
+-------------------------------------- */
+.vc-auth-layout.vc-auth-layout-org {
+    grid-template-columns: 3fr 1fr;
+}
+
+/* -------------------------------------
+   WIDER FORM WRAPPER
+-------------------------------------- */
+.vc-auth-form-wrapper.wide {
+    max-width: 1000px;
+}
+
+/* -------------------------------------
+   INNER FORM GRID (ACCOUNT | ORG)
+-------------------------------------- */
+.vc-auth-form-org {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+/* -------------------------------------
+   FORM SECTIONS (CARD STYLE)
+-------------------------------------- */
+.vc-form-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* ensures consistent spacing */
+}
+
+/* Section titles */
+.vc-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0a66c2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* -------------------------------------
+   INPUT + SELECT CONSISTENCY
+-------------------------------------- */
+.vc-auth-form-org input,
+.vc-auth-form-org textarea,
+.vc-auth-form-org select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #cfd8e3;
+    background: #f9fbfd;
+    font-size: 15px;
+}
+
+/* Select fix (browser inconsistency) */
+.vc-auth-form-org select {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #64748b 50%),
+        linear-gradient(135deg, #64748b 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 12px) 50%;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+}
+
+/* Focus */
+.vc-auth-form-org input:focus,
+.vc-auth-form-org textarea:focus,
+.vc-auth-form-org select:focus {
+    outline: none;
+    border-color: #0a66c2;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(10,102,194,0.15);
+}
+
+/* Textareas */
+.vc-auth-form-org textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* -------------------------------------
+   ROW HELPERS (STATE / CITY)
+-------------------------------------- */
+.vc-form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* -------------------------------------
+   FULL-WIDTH SUBMIT BUTTON
+-------------------------------------- */
+.vc-form-actions {
+    grid-column: span 2;
+    margin-top: 10px;
+}
+
+.vc-form-actions .vc-btn-primary {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+
+/* -------------------------------------
+   FOOTER CENTERING (LIKE signup_view)
+-------------------------------------- */
+.vc-auth-footer {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* -------------------------------------
+   RESPONSIVE BEHAVIOR
+-------------------------------------- */
+@media (max-width: 1000px) {
+
+    /* Collapse outer layout */
+    .vc-auth-layout.vc-auth-layout-org {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hide media */
+    .vc-auth-media {
+        display: none;
+    }
+
+    /* Stack inner form */
+    .vc-auth-form-org {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-form-actions,
+    .vc-auth-footer {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,78 @@
+/* Floating top alert (Volunteer Connect) */
+.vc-alert {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  /* bottom: 24px; */
+  top: 24px;
+  min-width: 280px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(15,20,30,0.12);
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: auto;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  /* start slightly down */
+  transform: translateX(-50%) translateY(-12px);
+}
+
+/* Show state (add .vc-alert--visible via JS) */
+.vc-alert.vc-alert--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Types */
+.vc-alert__icon { font-size: 18px; width: 20px; text-align: center; }
+.vc-alert__text { flex: 1; color: inherit; font-size: 14px; line-height:1.2; }
+.vc-alert__close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+/* success */
+.vc-alert-success {
+  background: rgba(76, 175, 80, 0.8);
+  border: 1px solid #388E3C;
+  color: #fff;
+}
+
+/* error */
+.vc-alert-error {
+  background: rgba(244, 67, 54, 0.8);
+  border: 1px solid #D32F2F;
+  color: #fff;
+}
+
+.vc-alert-warning {
+  background: rgba(255, 152, 0, 0.85);
+  border: 1px solid #F57C00;
+  color: #000;
+}
+
+/* info */
+.vc-alert-info {
+  background: rgba(33, 150, 243, 0.8);
+  border: 1px solid #1976D2;
+  color: #fff;
+}
+
+/* small screen: use full width minus margins */
+@media (max-width: 480px) {
+  .vc-alert { left: 8px; right: 8px; transform: none; width: auto; max-width: calc(100% - 16px); }
+  .vc-alert.vc-alert--visible { transform: none; opacity: 1; }
+}

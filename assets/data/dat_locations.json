@@ -1,0 +1,55 @@
+{
+    "countries": [
+        "Malaysia"
+    ],
+    "states": {
+        "Johor": [
+            "Johor Bahru", "Batu Pahat", "Muar", "Kluang", "Kulai", "Iskandar Puteri", "Pasir Gudang", "Pontian Kechil"
+        ],
+        "Kedah": [
+            "Alor Setar", "Sungai Petani", "Kulim", "Jitra", "Langkawi", "Baling", "Pokok Sena" 
+        ],
+        "Kelantan": [
+            "Kota Bharu", "Tanah Merah", "Gua Musang", "Pasir Mas", "Kuala Krai", "Tumpat"
+        ],
+        "Kuala Lumpur": [
+            "Kuala Lumpur", "Kepong", "Cheras", "Setapak", "Mid Valley City", "Bangsar", "Titiwangsa", "Bukit Bintang", "Desa Park City", "Mont Kiara", "Sentul"
+        ],
+        "Melaka": [
+            "Malacca City", "Ayer Keroh", "Alor Gajah", "Jasin", "Masjid Tanah", "Batu Berendam"
+        ],
+        "Negeri Sembilan": [
+            "Seremban", "Port Dickson", "Nilai", "Jempol (Bandar Seri Jempol)", "Tampin", "Kuala Pilah", "Rembau"
+        ],
+        "Pahang": [
+            "Kuantan", "Bentong", "Temerloh", "Raub", "Pekan", "Jerantut", "Genting Highlands", "Cameron Highlands (Tanah Rata)"
+        ],
+        "Penang": [
+            "George Town", "Bayan Lepas", "Butterworth", "Bukit Mertajam", "Balik Pulau", "Ayer Itam"
+        ],
+        "Perak": [
+            "Ipoh", "Taiping", "Lumut", "Teluk Intan", "Kuala Kangsar", "Batu Gajah", "Manjung / Sitiawan"
+        ],
+        "Perlis": [
+            "Kangar", "Arau", "Padang Besar", "Kuala Perlis"
+        ],
+        "Sabah": [
+            "Kota Kinabalu", "Sandakan", "Tawau", "Lahad Datu", "Keningau", "Semporna", "Ranau", "Kota Belud"
+        ],
+        "Sarawak": [
+            "Kuching", "Miri", "Sibu", "Bintulu", "Sarikei", "Samarahan", "Sri Aman", "Kapit"
+        ],
+        "Selangor": [
+            "Shah Alam", "Petaling Jaya", "Klang", "Subang Jaya", "Kajang", "Bangi", "Ampang Jaya", "Cyberjaya", "Banting", "Rawang"
+        ],
+        "Terengganu": [
+            "Kuala Terengganu", "Kemaman (Chukai)", "Dungun", "Marang", "Besut (Jerteh)", "Kuala Nerus", "Setiu (Bandar Permaisuri)"
+        ],
+        "Putrajaya": [
+            "Presint 1", "Presint 2", "Presint 3", "Presint 4"
+        ],
+        "Labuan": [
+            "Victoria", "Layang-Layang", "Sungai Labuan", "Patau-Patau", "Kampung Meruntum"
+        ]
+    }
+}

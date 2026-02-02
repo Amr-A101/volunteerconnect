@@ -1,0 +1,971 @@
+/* -----------------------------
+   ORG CUSTOM STYLING
+------------------------------ */
+
+.vc-org-icon {
+    color: #ffe073;
+    margin-right: 8px;
+}
+
+.vc-org-hero {
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+    position: relative;
+}
+
+/* Rating in Header */
+.vc-org-rating {
+    text-align: right;
+}
+
+.vc-rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.vc-star-filled {
+    color: #ffc107;
+}
+
+.vc-star-empty {
+    color: #e4e5e9;
+}
+
+.vc-rating-score {
+    margin-left: 8px;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+}
+
+.vc-rating-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tabs */
+.vc-org-tabs {
+    display: flex;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    border-bottom: 2px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.vc-org-tab {
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    position: relative;
+    text-decoration: none;
+}
+
+.vc-org-tab:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.vc-org-tab.active {
+    color: #f39c12;
+    border-bottom: 3px solid #f39c12;
+    background: #fff9e6;
+}
+
+.vc-tab-badge {
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+/* Tab Content */
+.vc-org-tab-content {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    min-height: 300px;
+}
+
+/* Opportunities Tab */
+.vc-opp-section {
+    margin-bottom: 32px;
+}
+
+.vc-section-title {
+    font-size: 20px;
+    color: #1f2937;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.vc-section-count {
+    background: #e5e7eb;
+    color: #374151;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+}
+
+.vc-opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.vc-opp-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-opp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.vc-opp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.vc-opp-title {
+    margin: 0;
+    font-size: 18px;
+    color: #1f2937;
+    flex: 1;
+}
+
+.vc-opp-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.vc-opp-title a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+.vc-opp-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.vc-opp-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-opp-summary {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.vc-opp-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.vc-opp-slots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.vc-opp-actions .vc-btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* Rating in opportunity cards */
+.vc-opp-rating {
+    margin-bottom: 12px;
+}
+
+.vc-rating-small .vc-rating-score {
+    font-size: 14px;
+    color: #374151;
+}
+
+.vc-rating-small .vc-rating-count {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.vc-rated-badge {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Empty State */
+.vc-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    margin-top: 20px;
+}
+
+.vc-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #9ca3af;
+}
+
+.vc-empty-state h3 {
+    margin: 0 0 8px 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.vc-empty-state p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Rating Modal */
+.vc-rate-stars-large {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.vc-rate-stars-large .fa-star {
+    transition: color 0.2s;
+}
+
+.vc-rate-stars-large .fa-star:hover {
+    transform: scale(1.1);
+}
+
+.vc-rating-label {
+    margin-left: 12px;
+    font-size: 16px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.vc-rate-review label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.vc-rate-review textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.vc-rate-review textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+/* Status Badges */
+.vc-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.vc-status-open {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #60a5fa;
+}
+
+.vc-status-completed {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+/* Buttons */
+.vc-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.vc-btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.vc-btn-primary {
+    background: #f39c12;
+    color: white;
+    border: 2px solid #f39c12;
+}
+
+.vc-btn-primary:hover {
+    background: #e67e22;
+    border-color: #e67e22;
+}
+
+.vc-btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+}
+
+.vc-btn-secondary:hover {
+    background: #d1d5db;
+    border-color: #d1d5db;
+}
+
+.vc-btn-warning {
+    background: #f59e0b;
+    color: white;
+    border: 2px solid #f59e0b;
+}
+
+.vc-btn-warning:hover {
+    background: #d97706;
+    border-color: #d97706;
+}
+
+/* Modal */
+.vc-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.vc-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vc-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-modal-close:hover {
+    color: #374151;
+}
+
+.vc-modal-body {
+    padding: 24px;
+}
+
+.vc-modal-footer {
+    padding: 20px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vc-pro-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .vc-pro-subcontent {
+        text-align: right;
+    }
+    
+    .vc-org-rating {
+        text-align: left;
+    }
+    
+    .vc-org-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .vc-org-tab {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+    
+    .vc-opp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-opp-card {
+        padding: 16px;
+    }
+    
+    .vc-opp-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .vc-opp-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .vc-opp-actions .vc-btn {
+        width: 100%;
+    }
+}
+
+.vc-pro-link-pill {
+    background: #fff7d1;
+    border: 1px solid #ffe599;
+    color: #a07400;
+}
+
+.vc-pro-link-pill:hover {
+    transform: scale(1.05);
+}
+
+.vc-pro-doc-list li {
+    margin: 6px 0;
+}
+
+.vc-pro-doc-list a {
+    text-decoration: none;
+    color: #0a66c2;
+    font-weight: 600;
+}
+
+.vc-pro-doc-list a:hover {
+    text-decoration: underline;
+}
+
+.vc-pro-doc-list i {
+    margin-right: 6px;
+    color: #0a66c2;
+}
+
+/* Add these styles to profile_org.css */
+
+/* Modal Styles */
+body.modal-open {
+    overflow: hidden;
+}
+
+.vc-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-modal.active {
+    display: flex;
+}
+
+.vc-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.vc-modal-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.vc-modal-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.vc-modal-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vc-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.vc-modal-close:hover {
+    color: #333;
+}
+
+.vc-modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    background: #f8f9fa;
+}
+
+/* Reviews Styles */
+.vc-reviews-stats {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.vc-rating-distribution {
+    flex: 1;
+}
+
+.vc-rating-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.vc-rating-label {
+    width: 50px;
+    font-size: 14px;
+    color: #666;
+}
+
+.vc-rating-bar-bg {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.vc-rating-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    transition: width 0.5s ease;
+}
+
+.vc-reviews-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 120px;
+}
+
+.vc-total-reviews, .vc-avg-rating {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.vc-total-number, .vc-avg-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.vc-total-label, .vc-avg-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Reviews Filters */
+.vc-reviews-filters {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+    background: white;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.vc-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vc-filter-group label {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vc-filter-group select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.vc-filter-group input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Reviews List */
+.vc-reviews-list {
+    padding: 20px 30px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: 50vh;
+}
+
+.vc-review-card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vc-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.vc-reviewer-info {
+    flex: 1;
+}
+
+.vc-reviewer-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.vc-reviewer-type {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.vc-review-opportunity {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vc-review-meta {
+    text-align: right;
+    min-width: 150px;
+}
+
+.vc-review-rating {
+    margin-bottom: 5px;
+}
+
+.vc-rating-value {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 8px;
+}
+
+.vc-review-date {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.vc-review-body {
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.vc-review-body p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.vc-empty-reviews {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+}
+
+.vc-empty-reviews i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.vc-empty-reviews p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.vc-filter-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+    border: 2px dashed #eee;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.vc-filter-empty-state .vc-btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+/* Make rating clickable */
+.vc-rating-link {
+    font-size: 14px;
+    margin-left: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.vc-org-rating:hover .vc-rating-link {
+    opacity: 1;
+}
+
+.vc-org-rating {
+    cursor: pointer;
+}
+
+
+/* Simple Ratings Modal Styles */
+.vc-ratings-list {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.vc-rating-item {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.vc-rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.vc-rating-reviewer {
+    flex: 1;
+}
+
+.vc-rating-reviewer strong {
+    color: #2c3e50;
+}
+
+.vc-reviewer-type {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+.vc-rating-meta {
+    text-align: right;
+    min-width: 150px;
+}
+
+.vc-rating-stars {
+    margin-bottom: 5px;
+}
+
+.vc-rating-value {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 8px;
+}
+
+.vc-rating-date {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.vc-rating-comment {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.vc-rating-comment p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.vc-no-ratings {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+}
+
+.vc-no-ratings i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.vc-no-ratings p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.vc-loading, .vc-error {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+/* Simple button style for View Ratings */
+.vc-opp-actions .vc-btn-primary {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.vc-opp-actions .vc-btn-primary:hover {
+    background: #45a049;
+    border-color: #45a049;
+}

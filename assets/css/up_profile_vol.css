@@ -1,0 +1,258 @@
+/* ------------------------------
+   GENERAL PAGE LAYOUT
+------------------------------ */
+.vc-up-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.vc-up-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.vc-up-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ------------------------------
+   ERROR BOX
+------------------------------ */
+.vc-up-errors {
+    padding: 12px 16px;
+    background: #ffe6e6;
+    border: 1px solid #ffb4b4;
+    color: #c70000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------
+   SECTIONS & LABELS
+------------------------------ */
+.vc-up-section {
+    margin-bottom: 32px;
+}
+
+.vc-up-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* ------------------------------
+   FORM INPUTS
+------------------------------ */
+.vc-up-input,
+.vc-up-select,
+.vc-up-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #cfd8e3;
+    font-size: 15px;
+    background: #f9fbfd;
+    transition: 0.25s;
+    box-sizing: border-box;
+}
+
+.vc-up-input:focus,
+.vc-up-select:focus,
+.vc-up-textarea:focus {
+    border-color: #0a66c2;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(10,102,194,0.15);
+}
+
+/* textarea */
+.vc-up-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ------------------------------
+   GRID SECTIONS
+------------------------------ */
+.vc-up-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.vc-up-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+.vc-up-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 760px) {
+    .vc-up-row-2,
+    .vc-up-row-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------
+   PROFILE AVATAR PREVIEW
+------------------------------ */
+.vc-up-avatar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.vc-up-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid #0a66c2;
+}
+
+/* File input smaller */
+.vc-up-input-file {
+    padding: 6px 0;
+}
+
+/* ------------------------------
+   MULTISELECT TAGS (TomSelect)
+------------------------------ */
+.vc-up-multiselect .ts-control {
+    background: #f9fbfd !important;
+    border-radius: 12px !important;
+    border-color: #cfd8e3 !important;
+}
+
+.vc-up-multiselect .ts-control:focus {
+    border-color: #0a66c2 !important;
+    box-shadow: 0 0 0 3px rgba(10,102,194,0.15);
+}
+
+/* Tag pills */
+.ts-control .ts-item {
+    background: #e7f2ff !important;
+    color: #0a66c2 !important;
+    border-radius: 50px !important;
+    padding: 4px 10px !important;
+    margin: 3px !important;
+}
+
+/* X remove button */
+.ts-control .ts-item .remove {
+    border-left: none !important;
+    color: #0a66c2 !important;
+}
+
+/* ------------------------------
+   EMERGENCY CONTACT ROWS
+------------------------------ */
+.vc-up-ec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vc-up-ec-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .vc-up-ec-row {
+        grid-template-columns: 1fr 1fr 35px;
+    }
+}
+
+/* remove EC button */
+.vc-btn-ec-remove {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.vc-btn-ec-remove:hover {
+    background: #d00000;
+}
+
+/* ------------------------------
+   BUTTONS (shared style)
+------------------------------ */
+.vc-btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    transition: 0.25s;
+}
+
+.vc-btn-primary {
+    background: #0a66c2;
+    color: white;
+}
+.vc-btn-primary:hover {
+    background: #004182;
+}
+
+.vc-btn-secondary {
+    background: #e9f2ff;
+    color: #0a66c2;
+    margin-top: 16px;
+}
+.vc-btn-secondary:hover {
+    background: #d7e7ff;
+}
+
+.vc-btn-light {
+    background: #f1f3f5;
+    color: #222;
+}
+.vc-btn-light:hover {
+    background: #e4e6e8;
+}
+
+/* Submit wrapper */
+.vc-up-submit {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.vc-up-submit .vc-btn {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: bold;
+}

@@ -1,0 +1,39 @@
+/* --- TomSelect tag style tweak --- */
+
+.ts-wrapper .ts-control .item {
+    background: #e8f0fe;
+    color: #1a73e8;
+    border-radius: 16px;
+    padding: 3px 8px;
+    margin: 3px 4px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    border: 1px solid #c7d8ff;
+}
+
+/* Remove icon (the “x” button inside the tag) */
+.ts-wrapper .ts-control .item .remove {
+    color: #1a73e8;
+    margin-left: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.ts-wrapper .ts-control .item .remove:hover {
+    opacity: 1;
+    color: #d93025;
+}
+
+/* On focus (tag selected) */
+.ts-wrapper .ts-control .item.active {
+    background: #d2e3fc;
+    border-color: #8ab4f8;
+}
+
+/* Placeholder spacing fix */
+.ts-wrapper.multi .ts-control > input {
+    margin-left: 6px;
+}

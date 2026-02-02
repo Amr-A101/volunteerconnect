@@ -1,0 +1,97 @@
+/* ===============================
+   VOLUNTEER SIGNUP LAYOUT
+=============================== */
+
+.vc-auth-layout.vc-auth-layout-vol {
+    grid-template-columns: 3fr 1fr;
+}
+
+/* Wider form for two columns */
+.vc-auth-form-wrapper-wide {
+    max-width: 1000px;
+}
+
+/* Two-column form grid */
+.vc-auth-form-vol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+/* Section blocks */
+.vc-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.vc-form-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0a66c2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Full-width submit row */
+.vc-form-actions {
+    grid-column: span 2;
+    margin-top: 10px;
+}
+
+.vc-form-actions .vc-btn-primary {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.vc-media-track {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    animation: vc-scroll-vertical 40s linear infinite;
+}
+
+/* Images */
+.vc-media-track img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 1000px) {
+    .vc-auth-layout.vc-auth-layout-vol {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-auth-media {
+        display: none;
+    }
+
+    .vc-auth-form-vol {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-form-actions,
+    .vc-auth-footer {
+        grid-column: span 1;
+    }
+}
+
+
+@keyframes vc-scroll-vertical {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}

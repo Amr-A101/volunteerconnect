@@ -1,0 +1,637 @@
+/* --------------------------------------------------
+   header_base.css (Shared by all roles)
+-------------------------------------------------- */
+
+:root {
+    --header-height: 70px;
+    --nav-spacing: 20px;
+    --transition-speed: 0.3s;
+}
+
+.vc-header {
+    width: 100%;
+    background: var(--header-bg, #ffffff);
+    border-bottom: 1px solid #e2e2e2;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: var(--header-height);
+}
+
+.vc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 30px;
+}
+
+/* Logo */
+.vc-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.vc-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.vc-logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--header-accent, #0a66c2);
+    letter-spacing: -0.5px;
+}
+
+/* Desktop Navigation */
+.vc-nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.vc-nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--header-text, #333);
+    white-space: nowrap;
+}
+
+.vc-nav-link:hover {
+    background: var(--nav-hover-bg, rgba(0, 0, 0, 0.05));
+    transform: translateY(-1px);
+}
+
+.vc-nav-cta {
+    background: var(--header-accent, #0a66c2);
+    color: white !important;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.vc-nav-cta:hover {
+    background: var(--header-accent-dark, #004182);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--header-accent-rgb, 10, 102, 194), 0.2);
+}
+
+/* User Dropdown */
+.vc-user-dropdown {
+    position: relative;
+    margin-left: 12px;
+}
+
+.vc-user-btn {
+    background: var(--header-accent, #0a66c2);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-speed) ease;
+    min-width: 140px;
+    justify-content: space-between;
+}
+
+.vc-user-btn:hover {
+    background: var(--header-accent-dark, #004182);
+    transform: translateY(-1px);
+}
+
+.vc-user-btn i:first-child {
+    font-size: 16px;
+}
+
+.vc-user-btn i:last-child {
+    font-size: 12px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.vc-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-speed) ease;
+    z-index: 1000;
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+
+.vc-dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.vc-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background var(--transition-speed) ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.vc-dropdown-menu a:last-child {
+    border-bottom: none;
+    color: #dc3545;
+}
+
+.vc-dropdown-menu a:hover {
+    background: #f8f9fa;
+    padding-left: 24px;
+}
+
+.vc-dropdown-menu a i {
+    width: 16px;
+    text-align: center;
+    color: var(--header-accent, #0a66c2);
+}
+
+/* Search Bar */
+.vc-search-bar {
+    flex-grow: 1;
+    max-width: 400px;
+    margin-left: 64px;
+}
+
+.vc-search-wrapper {
+    display: flex;
+    background: white;
+    border: 2px solid #e2e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color var(--transition-speed) ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.vc-search-wrapper:focus-within {
+    border-color: var(--header-accent, #0a66c2);
+    box-shadow: 0 0 0 3px rgba(var(--header-accent-rgb, 10, 102, 194), 0.1);
+}
+
+.vc-search-input {
+    flex-grow: 1;
+    padding: 12px 16px;
+    border: none;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+}
+
+.vc-search-input::placeholder {
+    color: #999;
+}
+
+.vc-search-btn {
+    background: var(--header-accent, #0a66c2);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background var(--transition-speed) ease;
+    font-size: 16px;
+}
+
+.vc-search-btn:hover {
+    background: var(--header-accent-dark, #004182);
+}
+
+/* Mobile Menu Toggle */
+.vc-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--header-text, #333);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background var(--transition-speed) ease;
+}
+
+.vc-menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Navigation Overlay */
+.vc-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.vc-mobile-overlay.active {
+    transform: translateX(0);
+}
+
+.vc-mobile-header {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vc-close-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.vc-nav-mobile {
+    padding: 30px 24px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.vc-mobile-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vc-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--header-accent, #0a66c2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.vc-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vc-user-info h4 {
+    color: white;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+}
+
+.vc-user-info p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-size: 14px;
+}
+
+.vc-mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 18px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.vc-mobile-link i {
+    width: 24px;
+    font-size: 18px;
+    color: var(--header-accent, #0a66c2);
+}
+
+.vc-mobile-link:hover {
+    color: var(--header-accent, #0a66c2);
+    padding-left: 10px;
+}
+
+.vc-logout {
+    color: #ff6b6b !important;
+    margin-top: 20px;
+    border-top: 2px solid rgba(255, 107, 107, 0.2);
+}
+
+.vc-logout i {
+    color: #ff6b6b !important;
+}
+
+@media (max-width: 1024px) {
+    .vc-header {
+        height: 60px;
+    }
+    
+    .vc-container {
+        padding: 0 16px;
+        gap: 16px;
+    }
+    
+    .vc-logo-text {
+        display: none;
+    }
+    
+    .vc-nav-desktop {
+        display: none;
+    }
+    
+    .vc-menu-toggle {
+        display: block;
+        order: 3;
+    }
+    
+    .vc-search-bar {
+        order: 2;
+        flex-grow: 1;
+        max-width: none;
+        margin: 0 64px;
+    }
+    
+    .vc-logo {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-search-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .vc-mobile-user {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+.vc-notification-wrapper {
+    position: relative;
+    margin-right: 12px;
+}
+
+.vc-notification-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    color: var(--gray-700);
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.vc-notification-btn:hover {
+    background: var(--gray-100);
+    color: var(--primary-color);
+}
+
+.vc-notification-btn:focus {
+    outline: none;
+}
+
+.vc-notif-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -35%);
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 999px;
+    padding: 0 5px;
+    box-shadow: 0 0 0 2px white;
+}
+
+.vc-notification-panel {
+    position: absolute;
+    right: 0;
+    top: 44px;
+    width: 360px;
+    max-height: 420px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.vc-notification-panel.active {
+    display: flex;
+}
+
+.vc-notif-header,
+.vc-notif-footer {
+    padding: 12px 16px;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vc-notif-footer {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: none;
+}
+
+.vc-notif-header strong {
+    font-size: 14px;
+    color: #111827;
+}
+
+.vc-mark-all {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.vc-mark-all:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.vc-notif-list {
+    overflow-y: auto;
+    max-height: 320px;
+}
+
+.vc-notif-empty {
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.vc-notif-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.vc-notif-item:hover {
+    background: #f9fafb;
+}
+
+.vc-notif-item.unread {
+    background: #eef6ff;
+}
+
+.vc-notif-item.unread:hover {
+    background: #e0efff;
+}
+
+.vc-notif-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.vc-notif-icon.type-info {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.vc-notif-icon.type-success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.vc-notif-icon.type-warning {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.vc-notif-icon.type-error {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.vc-notif-icon.type-system {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.vc-notif-content {
+    flex: 1;
+}
+
+.vc-notif-content strong {
+    font-size: 14px;
+    color: #111827;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.vc-notif-content p {
+    font-size: 13px;
+    color: #4b5563;
+    margin: 0 0 4px;
+    line-height: 1.4;
+}
+
+.vc-notif-content small {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.vc-notif-footer a {
+    font-size: 13px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.vc-notif-footer a:hover {
+    text-decoration: underline;
+}
+
+.vc-notif-delete {
+    background: none;
+    border: none;
+    color: #9ca3af; /* Gray-400 */
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0; /* Hidden by default */
+    transition: all 0.2s ease;
+    align-self: flex-start; /* Keeps it at the top-right of the item */
+    margin-top: -4px;
+    margin-right: -8px;
+}
+
+
+.vc-notif-item:hover .vc-notif-delete {
+    opacity: 1;
+}
+
+.vc-notif-delete:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+

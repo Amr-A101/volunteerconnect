@@ -1,0 +1,898 @@
+/* ----------------------------
+   MY APPLICATIONS DASHBOARD
+   Professional & Feature-Rich
+---------------------------- */
+
+
+:root {
+    --primary-color: #2563eb;
+    --primary-light: #dbeafe;
+    --secondary-color: #7c3aed;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #3b82f6;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --card-bg: #ffffff;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+/* -----------------------
+   MAIN LAYOUT
+----------------------- */
+.vc-applications-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 24px;
+    min-height: calc(100vh - 80px);
+}
+
+.vc-applications-page > * {
+    min-width: 0;
+}
+
+.vc-applications-header {
+    max-width: 1400px;
+    margin: 16px auto;
+    padding: 24px 24px 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.vc-applications-header h1 {
+    font-size: 28px;
+    text-align: right;
+    margin: 0;
+}
+
+.vc-subtitle {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    text-align: right;
+}
+
+/* -----------------------
+   LEFT FILTERS SIDEBAR
+----------------------- */
+.vc-filters-sidebar {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    height: fit-content;
+    position: sticky;
+    top: 24px;
+}
+
+.vc-filters-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gray-100);
+}
+
+/* Search Box */
+.vc-search-group {
+    margin-bottom: 24px;
+}
+
+.vc-search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: var(--gray-50);
+}
+
+.vc-search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    background: white;
+}
+
+.vc-search-input::placeholder {
+    color: var(--gray-400);
+}
+
+/* Date Filters */
+.vc-date-filters {
+    margin-bottom: 24px;
+}
+
+.vc-filter-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-date-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vc-date-option {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.vc-date-option:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-300);
+}
+
+.vc-date-option.active {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Status Quick Filters */
+.vc-status-filters {
+    margin-bottom: 24px;
+}
+
+.vc-status-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vc-status-filter-badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.vc-status-filter-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.vc-status-filter-badge.active {
+    border-color: currentColor;
+}
+
+/* Reset Filters */
+.vc-reset-filters {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.vc-btn-reset {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vc-btn-reset:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+}
+
+/* -----------------------
+   MAIN CONTENT AREA
+----------------------- */
+.vc-applications-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Header Stats */
+.vc-app-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.vc-stat-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.vc-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.vc-stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.vc-stat-label {
+    font-size: 14px;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tabs with Counts */
+.vc-tabs-header {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.vc-tabs-container {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.vc-tabs-container::-webkit-scrollbar {
+    display: none;
+}
+
+.vc-tab {
+    padding: 12px 24px;
+    border: none;
+    background: transparent;
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.vc-tab:hover {
+    background: var(--gray-100);
+    color: var(--gray-700);
+}
+
+.vc-tab.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.vc-tab-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.vc-tab.active .vc-tab-count {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Applications Container */
+.vc-applications-container {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Applications Header */
+.vc-apps-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.vc-apps-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-700);
+}
+
+.vc-results-count {
+    font-size: 14px;
+    color: var(--gray-600);
+}
+
+/* Pagination Controls */
+.vc-pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.vc-page-info {
+    font-size: 14px;
+    color: var(--gray-600);
+}
+
+.vc-pagination-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.vc-page-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--gray-300);
+    background: white;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vc-page-btn:hover:not(:disabled) {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+}
+
+.vc-page-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.vc-page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Page Size Selector */
+.vc-page-size {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.vc-page-size select {
+    padding: 6px 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    background: white;
+}
+
+/* -----------------------
+   APPLICATION CARDS
+----------------------- */
+.vc-applications-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vc-app-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vc-app-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gray-300);
+}
+
+.vc-app-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+/* Status-specific borders */
+.vc-app-card[data-status="pending"]::before { background: var(--warning-color); }
+.vc-app-card[data-status="shortlisted"]::before { background: var(--info-color); }
+.vc-app-card[data-status="accepted"]::before { background: var(--success-color); }
+.vc-app-card[data-status="rejected"]::before { background: var(--danger-color); }
+.vc-app-card[data-status="withdrawn"]::before { background: var(--gray-400); }
+
+.vc-app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.vc-app-main-info {
+    flex: 1;
+}
+
+.vc-app-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vc-app-org {
+    color: var(--gray-600);
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-app-location {
+    color: var(--gray-500);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+/* Status Display */
+.vc-app-status-section {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.vc-status-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vc-status-label {
+    font-size: 12px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vc-applicant-count {
+    font-size: 16px;
+}
+
+.vc-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.vc-badge.pending { background: #fef3c7; color: #92400e; }
+.vc-badge.shortlisted { background: #dbeafe; color: #1e40af; }
+.vc-badge.accepted { background: #d1fae5; color: #065f46; }
+.vc-badge.rejected { background: #fee2e2; color: #991b1b; }
+.vc-badge.withdrawn { background: #f1f5f9; color: #475569; }
+.vc-badge.open { background: #d1fae5; color: #065f46; }
+.vc-badge.closed { background: #fee2e2; color: #991b1b; }
+.vc-badge.draft { background: #fef3c7; color: #92400e; }
+
+/* Application Timeline */
+.vc-app-timeline {
+    margin: 16px 0;
+    padding: 16px;
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary-color);
+}
+
+.vc-timeline-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-timeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vc-timeline-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.vc-timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray-300);
+    flex-shrink: 0;
+}
+
+.vc-timeline-step.active .vc-timeline-dot {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.vc-timeline-step.completed .vc-timeline-dot {
+    background: var(--success-color);
+}
+
+.vc-timeline-step.rejected .vc-timeline-dot {
+    background: var(--danger-color);
+}
+
+
+.vc-timeline-info {
+    flex: 1;
+}
+
+.vc-timeline-date {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+/* Application Footer */
+.vc-app-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.vc-app-date {
+    font-size: 13px;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-app-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.vc-btn {
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vc-btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.vc-btn-primary:hover {
+    background: var(--primary-dark, #1d4ed8);
+    transform: translateY(-2px);
+}
+
+.vc-btn-secondary {
+    background: white;
+    color: var(--gray-700);
+    border-color: var(--gray-300);
+}
+
+.vc-btn-secondary:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+}
+
+.vc-btn-warning {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: white;
+    border: none;
+}
+
+.vc-btn-warning:hover {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    color: white;
+}
+
+.vc-btn-danger {
+    background: white;
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.vc-btn-danger:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+.vc-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Tooltips */
+.vc-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.vc-tooltip .vc-tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background: var(--gray-800);
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    font-weight: normal;
+    white-space: normal;
+}
+
+.vc-tooltip:hover .vc-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Empty State */
+.vc-empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    grid-column: 1 / -1;
+}
+
+.vc-empty-icon {
+    font-size: 48px;
+    color: var(--gray-300);
+    margin-bottom: 20px;
+}
+
+.vc-empty-state h3 {
+    font-size: 20px;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+}
+
+.vc-empty-state p {
+    color: var(--gray-600);
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Loading State */
+.vc-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    color: var(--gray-500);
+    gap: 12px;
+}
+
+.vc-loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--gray-200);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: vc-spin 1s linear infinite;
+}
+
+@keyframes vc-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* -----------------------
+   RESPONSIVE DESIGN
+----------------------- */
+@media (max-width: 1024px) {
+    .vc-applications-page {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-app-stats {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .vc-app-stats > .vc-stat-card {
+        flex: 1;
+    }
+    
+    .vc-filters-sidebar {
+        position: static;
+    }
+
+    .vc-date-options {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .vc-applications-page {
+        padding: 16px;
+    }
+    
+    .vc-app-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vc-app-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .vc-app-status-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .vc-app-footer {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .vc-app-actions {
+        justify-content: center;
+    }
+    
+    .vc-pagination-controls {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .vc-app-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .vc-tabs-container {
+        padding-bottom: 0;
+    }
+    
+    .vc-tab {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+
+.vc-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.vc-btn-outline {
+    background: #e5e7eb;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+}
+
+.vc-btn-outline:hover {
+    background: var(--light-bg);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.vc-timeline-steps {
+    max-height: 1000px; /* large enough to show all content */
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.vc-timeline-steps.collapsed {
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+/* Toggle button styles */
+.vc-timeline-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 0.9em;
+    color: var(--primary-color);
+}
+
+.vc-timeline-toggle:focus {
+    outline: none;
+}

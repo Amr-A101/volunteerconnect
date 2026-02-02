@@ -1,0 +1,10 @@
+@import url('footer_base.css');
+
+/* Guest Theme — soft blue */
+:root {
+    --footer-bg: #f9fbff;
+    --footer-link: #2a4a9c;
+    --footer-accent: #406bd6;
+    --footer-role-text: #334d8c;
+    --footer-muted: #6f7ea5;
+}
