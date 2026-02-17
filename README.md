@@ -1,37 +1,56 @@
 # Volunteer Connect
 
-A web-based platform designed to connect volunteers with organizations by simplifying the discovery, application, and management of volunteer opportunities.
+Volunteer Connect is a full-stack web application designed to centralize volunteer opportunity discovery and management.
 
-## Overview
+<img src="https://drive.google.com/uc?export=view&id=17RSAK4vA94LPjhgDmLfb8D4To5OOPzwl" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." />
 
-Many volunteering opportunities are shared across different platforms, making it difficult for volunteers to find suitable roles and for organizations to reach the right people. Volunteer Connect addresses this problem by providing a centralized system where both volunteers and organizations can interact efficiently.
+## 🔗 Promo Video
+[![Video Thumbnail](https://img.youtube.com/vi/KrtNClzCDbs/0.jpg)](https://youtu.be/KrtNClzCDbs)
 
-## Key Features
+## Problem
 
-- User account management for volunteers, organizations, and administrators
-- Volunteer profile creation with skills, interests, and availability
-- Opportunity listing and management for organizations
-- Search and filtering of volunteer opportunities
+Volunteer opportunities are often scattered across social media and informal channels. This makes it difficult for volunteers to find suitable roles and for organizations to manage applicants efficiently.
+
+## Solution
+
+Volunteer Connect provides a centralized platform where:
+- Volunteers can create profiles, search opportunities, and apply online.
+- Organizations can post opportunities, review applications, and manage volunteers.
+- Administrators can oversee platform activity.
+
+## Features
+
+- Multi-role authentication (Volunteer, Organization, Admin)
+- Opportunity listing and search filtering
 - Application and approval workflow
-- Simple matching between volunteers and opportunities
-- Real-time notifications and messaging
-- Ratings and reviews system
-- Role-based dashboards (volunteer, organization, admin)
+- Basic volunteer-opportunity matching
+- Real-time notifications
+- Messaging system
+- Ratings and reviews
+- Role-based dashboards
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: PHP
-- Database: MySQL
+- PHP (Backend logic)
+- MySQL (Database)
+- HTML, CSS, JavaScript (Frontend)
+- Apache / XAMPP (Local server)
 
-## Project Purpose
+## What I Learned
 
-This project was developed as part of a Final Year Project to demonstrate full-stack web development, system analysis, and user-centered design.
+- Designing role-based system architecture
+- Implementing application workflow logic
+- Handling state management (pending / approved / rejected)
+- Balancing feature development with maintainability
+- Iterative UI improvement based on testing feedback
 
-## Status
+## Future Improvements
 
-This project is functionally complete and may be further improved with additional features and optimizations.
+- Stronger separation of concerns (MVC structure)
+- API layer restructuring
+- Improved UI/UX consistency
+- Deployment to production environment
 
----
+## Demo
 
-*This system was created as part of an academic project and maintained as a portfolio showcase.*
+Check out this video on YouTube to see the system demo: [https://youtu.be/SB30bJtAFkM]
