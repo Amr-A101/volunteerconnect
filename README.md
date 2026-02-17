@@ -4,8 +4,6 @@ A web-based platform designed to connect volunteers with organizations by simpli
 
 ## Demo
 
-[![Volunteer Connect Demo](https://img.youtube.com/vi/KrtNClzCDbs/0.jpg)](https://www.youtube.com/watch?v=KrtNClzCDbs)
-
 
 ## Overview
 
