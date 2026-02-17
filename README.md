@@ -2,6 +2,11 @@
 
 A web-based platform designed to connect volunteers with organizations by simplifying the discovery, application, and management of volunteer opportunities.
 
+## Demo
+
+[![Volunteer Connect Demo](https://img.youtube.com/vi/KrtNClzCDbs/0.jpg)](https://www.youtube.com/watch?v=KrtNClzCDbs)
+
+
 ## Overview
 
 Many volunteering opportunities are shared across different platforms, making it difficult for volunteers to find suitable roles and for organizations to reach the right people. Volunteer Connect addresses this problem by providing a centralized system where both volunteers and organizations can interact efficiently.
